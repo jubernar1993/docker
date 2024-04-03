@@ -13,6 +13,18 @@ stages {
 					 }
 		}
 	}
+
+
+stage {
+	steps {
+		sh 'docker images | grep sample-app | awk '{print $1":",$2":",$3}''
+	}
+}
+
+
+
+
+
 }
 
 }
