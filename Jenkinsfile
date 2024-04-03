@@ -6,9 +6,11 @@ pipeline {
 	}
 
 stages {
-	stage ('SAMPLE PILE TESTING'){
+	stage ('Docker-Build-Image'){
 		steps {
-                     echo 'this is a test to check the funtionality of the pipeline'
+                     script {
+					dockerImage	= docker.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}"
+					 }
 		}
 	}
 }
