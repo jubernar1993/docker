@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	environment {
-		IMAGE_REPO_NAME="SAMPLE-APP"
+		IMAGE_REPO_NAME="sample-app"
 		IMAGE_TAG="latest"
 	}
 
