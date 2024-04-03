@@ -15,7 +15,7 @@ stages {
 	}
 
 
-stage {
+stage ('Image info'){
 	steps {
 		
 			docker images | grep sample-app | awk '{print $1":",$2":",$3}'
